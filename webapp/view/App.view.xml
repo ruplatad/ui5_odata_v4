@@ -19,7 +19,8 @@
 									$$updateGroupId : 'peopleGroup'
 
 								}
-							}">
+							}"
+							mode="SingleSelectLeft">
 							<headerToolbar>
 								<OverflowToolbar>
 									<content>
@@ -30,6 +31,15 @@
 												placeholder="{i18n>searchFieldPlaceholder}"
 												enabled="{= !${appView>/hasUIChanges}}"
 												search=".onSearch"/>
+										<Button
+												id="deleteUserButton"
+												icon="sap-icon://delete"
+												tooltip="{i18n>deleteButtonText}"
+												press=".onDelete">
+											<layoutData>
+												<OverflowToolbarLayoutData priority="NeverOverflow"/>
+											</layoutData>
+										</Button>
 										<Button
 												id="addUserButton"
 												icon="sap-icon://add"
